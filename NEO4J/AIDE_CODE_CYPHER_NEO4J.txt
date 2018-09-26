@@ -1,0 +1,45 @@
+Requêtes Cypher 
+
+ANALYSES
+
+- Afficher les delits commis de nuit dans le PDQ1 :
+MATCH (P1:PDQ1) WHERE P1.QUART = "jour" RETURN P1
+
+- Afficher les délits commis de jours dans tous les PDQ :
+MATCH (n) WHERE n.QUART="jour" RETURN n
+
+- Afficher 20  délits commis de jours dans tous les PDQ :
+MATCH (n) WHERE n.QUART="jour" RETURN n LIMIT 20
+
+- Afficher les types de délits du 30  mars 2018 à proximité du PDQ20 :
+MATCH (n)-[r:RELATED_TO]->(P20:PDQ20) WHERE P20.QUART="jour" AND P20.DATE ="2018-03-30" RETURN n.CATEGORIE
+
+- Afficher les crénaux horaires des délits du 30  mars 2018 a proximité du PDQ20 :
+MATCH (n)-[r:RELATED_TO]->(P20:PDQ20) WHERE P20.QUART="jour" AND P20.DATE ="2018-03-30" RETURN n.QUART
+
+- Afficher les délits de type méfait le 29 mars 2018 a proximité du PDQ7 :
+MATCH (n)-[r:RELATED_TO]->(P7:PDQ7) WHERE n.CATEGORIE="M?fait" AND P7.DATE ="2018-03-29" RETURN n
+
+- Compter le les délits de type méfait le 29 mars 2018 a proximité du PDQ7 par créneau horaire :
+MATCH (n)-[r:RELATED_TO]->(P7:PDQ7) WHERE n.CATEGORIE="M?fait" AND P7.DATE ="2018-03-29" RETURN n.QUART, count(*)
+
+LOGISTIQUE
+
+-Supprimer une relation
+MATCH (P48:PDQ48)-[r:RELATED_TO]->(P49:PDQ48) DELETE r
+
+- Supprimer une relation par id 
+Match ()-[r]-() Where ID(r)=1 Delete r
+
+- Supprimer toutes les relations p
+Match ()-[r]-() Delete r
+
+-Supprimer tous les noeuds
+MATCH (n) DELETE n
+
+-Supprimer toutes les relations et tous les noeuds 
+MATCH (n) DETACH DELETE n
+
+-Changer nombre maximal de lignes de sortie autorisées :
+Dans le browser Neo4j, cliquer sur l’icône paramètres et modifier le nombre de ligne maximale voulu dans la partie « Graph Visualization » puis « Max Row »
+

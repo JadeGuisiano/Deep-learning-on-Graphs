@@ -1,0 +1,28 @@
+
+REQUETES EXPORT FICHIER CVS DE NEO4J (NON JSON /!\)
+
+4 requêtes distinctes :
+
+(1) MATCH p=(n)-[r:RELATED_TO]->(m)  RETURN n.ID,m.ID 
+(2) MATCH (n) RETURN n.SIT
+(3) MATCH (n) RETURN n.ID
+(4) MATCH (n) RETURN n.CATEGORIE,n.DATE, n.QUART,n.PDQ, n.LAT, n.LONG
+
+(1) xxx_A
+(2) xxx_graph_indicator
+(3) xxx_node_labels
+(4) xxx_node_attributes
+
+ou 
+
+2 requêtes  :
+
+
+(1)  MATCH p=(n)-[r:RELATED_TO]->(m)  RETURN n.ID,m.ID 
+
+(2') MATCH (n) RETURN n.G, n.ID, n.CATEGORIE,n.DATE, n.QUART,n.PDQ, n.LAT, n.LONG ORDER BY n.G
+
+
+(1) xxx_A
+(2') xxx_graph_indicator xxx_node_labels xxx_node_attributes
+

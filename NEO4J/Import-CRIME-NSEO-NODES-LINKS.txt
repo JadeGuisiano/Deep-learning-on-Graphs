@@ -1,0 +1,637 @@
+﻿Code import SIT N.S.E.O 
+
+Attention PDQ1, PDQ1.1 ou PDQ1.2
+
+PERIODE 1 : 27-31
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ1.csv" AS line FIELDTERMINATOR ';'
+CREATE (P1:PDQ1 { CATEGORIE: line.CATEGORIE, DATE: line.DATE, QUART: line.QUART, PDQ: toInteger(line.PDQ), LAT: toFloat(line.LAT), LONG: toFloat(line.LONG), ID: toInteger(line.ID), G:7, QUARTIER:'Baie-DUrfé, Beaconsfield, Kirkland, Sainte-Anne-de-Bellevue, Senneville',SIT:'Ouest' })
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ3.csv" AS csvLine3 FIELDTERMINATOR ';'
+CREATE (P3:PDQ3 { CATEGORIE: csvLine3.CATEGORIE, DATE: csvLine3.DATE, QUART: csvLine3.QUART, PDQ: toInteger(csvLine3.PDQ), LAT: toFloat(csvLine3.LAT), LONG: toFloat(csvLine3.LONG), ID: toInteger(csvLine3.ID), G:7, QUARTIER:'LÎle-Bizard, Pierrefonds, Sainte-Geneviève, Roxboro', SIT:'Ouest'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ4.csv" AS csvLine4 FIELDTERMINATOR ';'
+CREATE (P4:PDQ4 { CATEGORIE: csvLine4.CATEGORIE, DATE: csvLine4.DATE, QUART: csvLine4.QUART, PDQ: toInteger(csvLine4.PDQ), LAT: toFloat(csvLine4.LAT), LONG: toFloat(csvLine4.LONG), ID: toInteger(csvLine4.ID), G:7, QUARTIER:'Dollard-Des Ormeaux', SIT:'Ouest'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ555.csv" AS csvLine555 FIELDTERMINATOR ';'
+CREATE (P5:PDQ555 { CATEGORIE: csvLine555.CATEGORIE, DATE: csvLine555.DATE, QUART: csvLine555.QUART, PDQ: toInteger(csvLine555.PDQ), LAT: toFloat(csvLine555.LAT), LONG: toFloat(csvLine555.LONG), ID: toInteger(csvLine555.ID), G:7,  QUARTIER:'Dorval, LÎle-Dorval, Pointe-Claire, Aéroport International Pierre-Elliot-Trudeau de Montréal', SIT:'Ouest'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ7.csv" AS csvLine7 FIELDTERMINATOR ';'
+CREATE (P7:PDQ7 { CATEGORIE: csvLine7.CATEGORIE, DATE: csvLine7.DATE, QUART: csvLine7.QUART, PDQ: toInteger(csvLine7.PDQ), LAT: toFloat(csvLine7.LAT), LONG: toFloat(csvLine7.LONG), ID: toInteger(csvLine7.ID), G:7, QUARTIER:'Saint-Laurent', SIT:'Ouest'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ8.csv" AS csvLine8 FIELDTERMINATOR ';'
+CREATE (P8:PDQ8 { CATEGORIE: csvLine8.CATEGORIE, DATE: csvLine8.DATE, QUART: csvLine8.QUART, PDQ: toInteger(csvLine8.PDQ), LAT: toFloat(csvLine8.LAT), LONG: toFloat(csvLine8.LONG), ID: toInteger(csvLine8.ID), G:7, QUARTIER:'Saint-Laurent', SIT:'Ouest'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ9.csv" AS csvLine9 FIELDTERMINATOR ';'
+CREATE (P9:PDQ9 { CATEGORIE: csvLine9.CATEGORIE, DATE: csvLine9.DATE, QUART: csvLine9.QUART, PDQ: toInteger(csvLine9.PDQ), LAT: toFloat(csvLine9.LAT), LONG: toFloat(csvLine9.LONG), ID: toInteger(csvLine9.ID), G:7, QUARTIER:'Côte Saint-Luc, Hampstead, Montréal-Ouest', SIT:'Ouest'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ10.csv" AS csvLine10 FIELDTERMINATOR ';'
+CREATE (P10:PDQ10 { CATEGORIE: csvLine10.CATEGORIE, DATE: csvLine10.DATE, QUART: csvLine10.QUART, PDQ: toInteger(csvLine10.PDQ), LAT: toFloat(csvLine10.LAT), LONG: toFloat(csvLine10.LONG), ID: toInteger(csvLine10.ID), G:4, QUARTIER:'Bordeaux, Cartierville', SIT:'Nord'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ11.csv" AS csvLine11 FIELDTERMINATOR ';'
+CREATE (P11:PDQ11 { CATEGORIE: csvLine11.CATEGORIE, DATE: csvLine11.DATE, QUART: csvLine11.QUART, PDQ: toInteger(csvLine11.PDQ), LAT: toFloat(csvLine11.LAT), LONG: toFloat(csvLine11.LONG), ID: toInteger(csvLine11.ID), G:7, QUARTIER:'Notre-Dame-de-Grâce', SIT:'Ouest'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ12.csv" AS csvLine12 FIELDTERMINATOR ';'
+CREATE (P12:PDQ12 { CATEGORIE: csvLine12.CATEGORIE, DATE: csvLine12.DATE, QUART: csvLine12.QUART, PDQ: toInteger(csvLine12.PDQ), LAT: toFloat(csvLine12.LAT), LONG: toFloat(csvLine12.LONG), ID: toInteger(csvLine12.ID), G:10, QUARTIER:'Ville-Marie Ouest, Westmount', SIT:'Sud'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ13.csv" AS csvLine13 FIELDTERMINATOR ';'
+CREATE (P13:PDQ13 { CATEGORIE: csvLine13.CATEGORIE, DATE: csvLine13.DATE, QUART: csvLine13.QUART, PDQ: toInteger(csvLine13.PDQ), LAT: toFloat(csvLine13.LAT), LONG: toFloat(csvLine13.LONG), ID: toInteger(csvLine13.ID), G:7, QUARTIER:'LaSalle', SIT:'Ouest'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ15.csv" AS csvLine15 FIELDTERMINATOR ';'
+CREATE (P15:PDQ15 { CATEGORIE: csvLine15.CATEGORIE, DATE: csvLine15.DATE, QUART: csvLine15.QUART, PDQ: toInteger(csvLine15.PDQ), LAT: toFloat(csvLine15.LAT), LONG: toFloat(csvLine15.LONG), ID: toInteger(csvLine15.ID), G:10, QUARTIER:'Saint-Paul, Petite-Bourgogne, Pointe-Saint-Charles, Saint-Henri, Ville-Émard', SIT:'Sud'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ16.csv" AS csvLine16 FIELDTERMINATOR ';'
+CREATE (P16:PDQ16 { CATEGORIE: csvLine16.CATEGORIE, DATE: csvLine16.DATE, QUART: csvLine16.QUART, PDQ: toInteger(csvLine16.PDQ), LAT: toFloat(csvLine16.LAT), LONG: toFloat(csvLine16.LONG), ID: toInteger(csvLine16.ID), G:10, QUARTIER:'Île-des-Sœurs, Verdun', SIT:'Sud'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ20.csv" AS csvLine20 FIELDTERMINATOR ';'
+CREATE (P20:PDQ20 { CATEGORIE: csvLine20.CATEGORIE, DATE: csvLine20.DATE, QUART: csvLine20.QUART, PDQ: toInteger(csvLine20.PDQ), LAT: toFloat(csvLine20.LAT), LONG: toFloat(csvLine20.LONG), ID: toInteger(csvLine20.ID), G:10, QUARTIER:'Centre-Ville (Ville-Marie Ouest), Parc du Mont-Royal', SIT:'Sud'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ2150.csv" AS csvLine2150 FIELDTERMINATOR ';'
+CREATE (P2150:PDQ2150 { CATEGORIE: csvLine2150.CATEGORIE, DATE: csvLine2150.DATE, QUART: csvLine2150.QUART, PDQ: toInteger(csvLine2150.PDQ), LAT: toFloat(csvLine2150.LAT), LONG: toFloat(csvLine2150.LONG), ID: toInteger(csvLine2150.ID), G:10, QUARTIER:'Centre-Ville(Ville-Marie Est), Île Notre-Dame, Île Sainte-Hélène, Vieux-Montréal, Métro de Montréal', SIT:'Sud'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ22.csv" AS csvLine22 FIELDTERMINATOR ';'
+CREATE (P22:PDQ22 { CATEGORIE: csvLine22.CATEGORIE, DATE: csvLine22.DATE, QUART: csvLine22.QUART, PDQ: toInteger(csvLine22.PDQ), LAT: toFloat(csvLine22.LAT), LONG: toFloat(csvLine22.LONG), ID: toInteger(csvLine22.ID), G:10, QUARTIER:'Centre-Sud', SIT:'Sud'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ23.csv" AS csvLine23 FIELDTERMINATOR ';'
+CREATE (P23:PDQ23 { CATEGORIE: csvLine23.CATEGORIE, DATE: csvLine23.DATE, QUART: csvLine23.QUART, PDQ: toInteger(csvLine23.PDQ), LAT: toFloat(csvLine23.LAT), LONG: toFloat(csvLine23.LONG), ID: toInteger(csvLine23.ID), G:1, QUARTIER:'Hochelaga-Maisonneuve', SIT:'Est'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ24.csv" AS csvLine24 FIELDTERMINATOR ';'
+CREATE (P24:PDQ24 { CATEGORIE: csvLine24.CATEGORIE, DATE: csvLine24.DATE, QUART: csvLine24.QUART, PDQ: toInteger(csvLine24.PDQ), LAT: toFloat(csvLine24.LAT), LONG: toFloat(csvLine24.LONG), ID: toInteger(csvLine24.ID), G:4, QUARTIER:'Mont-Royal, Outremont', SIT:'Nord'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ26.csv" AS csvLine26 FIELDTERMINATOR ';'
+CREATE (P26:PDQ26 { CATEGORIE: csvLine26.CATEGORIE, DATE: csvLine26.DATE, QUART: csvLine26.QUART, PDQ: toInteger(csvLine26.PDQ), LAT: toFloat(csvLine26.LAT), LONG: toFloat(csvLine26.LONG), ID: toInteger(csvLine26.ID), G:7, QUARTIER:'Côte-des-Neiges-Ouest', SIT:'Ouest'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ27.csv" AS csvLine27 FIELDTERMINATOR ';'
+CREATE (P27:PDQ27 { CATEGORIE: csvLine27.CATEGORIE, DATE: csvLine27.DATE, QUART: csvLine27.QUART, PDQ: toInteger(csvLine27.PDQ), LAT: toFloat(csvLine27.LAT), LONG: toFloat(csvLine27.LONG), ID: toInteger(csvLine27.ID), G:4, QUARTIER:'Ahuntsic', SIT:'Nord'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ30.csv" AS csvLine30 FIELDTERMINATOR ';'
+CREATE (P30:PDQ30 { CATEGORIE: csvLine30.CATEGORIE, DATE: csvLine30.DATE, QUART: csvLine30.QUART, PDQ: toInteger(csvLine30.PDQ), LAT: toFloat(csvLine30.LAT), LONG: toFloat(csvLine30.LONG), ID: toInteger(csvLine30.ID), G:4, QUARTIER:'Saint-Michel', SIT:'Nord'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ31.csv" AS csvLine31 FIELDTERMINATOR ';'
+CREATE (P31:PDQ31 { CATEGORIE: csvLine31.CATEGORIE, DATE: csvLine31.DATE, QUART: csvLine31.QUART, PDQ: toInteger(csvLine31.PDQ), LAT: toFloat(csvLine31.LAT), LONG: toFloat(csvLine31.LONG), ID: toInteger(csvLine31.ID), G:4, QUARTIER:'Villeray', SIT:'Nord'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ33.csv" AS csvLine33 FIELDTERMINATOR ';'
+CREATE (P33:PDQ33 { CATEGORIE: csvLine33.CATEGORIE, DATE: csvLine33.DATE, QUART: csvLine33.QUART, PDQ: toInteger(csvLine33.PDQ), LAT: toFloat(csvLine33.LAT), LONG: toFloat(csvLine33.LONG), ID: toInteger(csvLine33.ID), G:4, QUARTIER:'Parc-Extension', SIT:'Nord'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ35.csv" AS csvLine35 FIELDTERMINATOR ';'
+CREATE (P35:PDQ35 { CATEGORIE: csvLine35.CATEGORIE, DATE: csvLine35.DATE, QUART: csvLine35.QUART, PDQ: toInteger(csvLine35.PDQ), LAT: toFloat(csvLine35.LAT), LONG: toFloat(csvLine35.LONG), ID: toInteger(csvLine35.ID), G:4, QUARTIER:'La Petite-Italie, La petite-Patrie, Outremont(3 rues)', SIT:'Nord'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ38.csv" AS csvLine38 FIELDTERMINATOR ';'
+CREATE (P38:PDQ38 { CATEGORIE: csvLine38.CATEGORIE, DATE: csvLine38.DATE, QUART: csvLine38.QUART, PDQ: toInteger(csvLine38.PDQ), LAT: toFloat(csvLine38.LAT), LONG: toFloat(csvLine38.LONG), ID: toInteger(csvLine38.ID), G:4, QUARTIER:'Le Plateau-Mont-Royal', SIT:'Nord'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ39.csv" AS csvLine39 FIELDTERMINATOR ';'
+CREATE (P39:PDQ39 { CATEGORIE: csvLine39.CATEGORIE, DATE: csvLine39.DATE, QUART: csvLine39.QUART, PDQ: toInteger(csvLine39.PDQ), LAT: toFloat(csvLine39.LAT), LONG: toFloat(csvLine39.LONG), ID: toInteger(csvLine39.ID), G:1, QUARTIER:'Arrondissement de Montréal-Nord', SIT:'Est'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ42.csv" AS csvLine42 FIELDTERMINATOR ';'
+CREATE (P42:PDQ42 { CATEGORIE: csvLine42.CATEGORIE, DATE: csvLine42.DATE, QUART: csvLine42.QUART, PDQ: toInteger(csvLine42.PDQ), LAT: toFloat(csvLine42.LAT), LONG: toFloat(csvLine42.LONG), ID: toInteger(csvLine42.ID), G:1, QUARTIER:'Saint-Léonard', SIT:'Est'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ44.csv" AS csvLine44 FIELDTERMINATOR ';'
+CREATE (P44:PDQ44 { CATEGORIE: csvLine44.CATEGORIE, DATE: csvLine44.DATE, QUART: csvLine44.QUART, PDQ: toInteger(csvLine44.PDQ), LAT: toFloat(csvLine44.LAT), LONG: toFloat(csvLine44.LONG), ID: toInteger(csvLine44.ID), G:4, QUARTIER:'Rosemont - La Petite-Patrie', SIT:'Nord'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ45.csv" AS csvLine45 FIELDTERMINATOR ';'
+CREATE (P45:PDQ45 { CATEGORIE: csvLine45.CATEGORIE, DATE: csvLine45.DATE, QUART: csvLine45.QUART, PDQ: toInteger(csvLine45.PDQ), LAT: toFloat(csvLine45.LAT), LONG: toFloat(csvLine45.LONG), ID: toInteger(csvLine45.ID), G:1, QUARTIER:'Rivière-des-Prairies', SIT:'Est'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ46.csv" AS csvLine46 FIELDTERMINATOR ';'
+CREATE (P46:PDQ46 { CATEGORIE: csvLine46.CATEGORIE, DATE: csvLine46.DATE, QUART: csvLine46.QUART, PDQ: toInteger(csvLine46.PDQ), LAT: toFloat(csvLine46.LAT), LONG: toFloat(csvLine46.LONG), ID: toInteger(csvLine46.ID), G:1, QUARTIER:'Anjou', SIT:'Est'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ48.csv" AS csvLine48 FIELDTERMINATOR ';'
+CREATE (P48:PDQ48 { CATEGORIE: csvLine48.CATEGORIE, DATE: csvLine48.DATE, QUART: csvLine48.QUART, PDQ: toInteger(csvLine48.PDQ), LAT: toFloat(csvLine48.LAT), LONG: toFloat(csvLine48.LONG), ID: toInteger(csvLine48.ID), G:1, QUARTIER:'Arrondissement de Mercier-Hochelaga-Maisonneuve', SIT:'Est'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ49.csv" AS csvLine49 FIELDTERMINATOR ';'
+CREATE (P49:PDQ49 { CATEGORIE: csvLine49.CATEGORIE, DATE: csvLine49.DATE, QUART: csvLine49.QUART, PDQ: toInteger(csvLine49.PDQ), LAT: toFloat(csvLine49.LAT), LONG: toFloat(csvLine49.LONG), ID: toInteger(csvLine49.ID), G:1, QUARTIER:'Montréal-Est, Pointe-Aux-Trembles', SIT:'Est'})
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+PERIODE 2 : 22-26 - M
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ1.1.csv" AS line FIELDTERMINATOR ';'
+CREATE (P1M:PDQ1M { CATEGORIE: line.CATEGORIE, DATE: line.DATE, QUART: line.QUART, PDQ: toInteger(line.PDQ), LAT: toFloat(line.LAT), LONG: toFloat(line.LONG), ID: toInteger(line.ID), G:8, QUARTIER:'Baie-DUrfé, Beaconsfield, Kirkland, Sainte-Anne-de-Bellevue, Senneville',SIT:'Ouest' })
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ3.1.csv" AS csvLine3 FIELDTERMINATOR ';'
+CREATE (P3M:PDQ3M { CATEGORIE: csvLine3.CATEGORIE, DATE: csvLine3.DATE, QUART: csvLine3.QUART, PDQ: toInteger(csvLine3.PDQ), LAT: toFloat(csvLine3.LAT), LONG: toFloat(csvLine3.LONG), ID: toInteger(csvLine3.ID), G:8, QUARTIER:'LÎle-Bizard, Pierrefonds, Sainte-Geneviève, Roxboro', SIT:'Ouest'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ4.1.csv" AS csvLine4 FIELDTERMINATOR ';'
+CREATE (P4M:PDQ4M { CATEGORIE: csvLine4.CATEGORIE, DATE: csvLine4.DATE, QUART: csvLine4.QUART, PDQ: toInteger(csvLine4.PDQ), LAT: toFloat(csvLine4.LAT), LONG: toFloat(csvLine4.LONG), ID: toInteger(csvLine4.ID), G:8, QUARTIER:'Dollard-Des Ormeaux', SIT:'Ouest'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ555.1.csv" AS csvLine555 FIELDTERMINATOR ';'
+CREATE (P5M:PDQ555M { CATEGORIE: csvLine555.CATEGORIE, DATE: csvLine555.DATE, QUART: csvLine555.QUART, PDQ: toInteger(csvLine555.PDQ), LAT: toFloat(csvLine555.LAT), LONG: toFloat(csvLine555.LONG), ID: toInteger(csvLine555.ID), G:8, QUARTIER:'Dorval, LÎle-Dorval, Pointe-Claire, Aéroport International Pierre-Elliot-Trudeau de Montréal', SIT:'Ouest'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ7.1.csv" AS csvLine7 FIELDTERMINATOR ';'
+CREATE (P7M:PDQ7M { CATEGORIE: csvLine7.CATEGORIE, DATE: csvLine7.DATE, QUART: csvLine7.QUART, PDQ: toInteger(csvLine7.PDQ), LAT: toFloat(csvLine7.LAT), LONG: toFloat(csvLine7.LONG), ID: toInteger(csvLine7.ID), G:8, QUARTIER:'Saint-Laurent', SIT:'Ouest'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ8.1.csv" AS csvLine8 FIELDTERMINATOR ';'
+CREATE (P8M:PDQ8M { CATEGORIE: csvLine8.CATEGORIE, DATE: csvLine8.DATE, QUART: csvLine8.QUART, PDQ: toInteger(csvLine8.PDQ), LAT: toFloat(csvLine8.LAT), LONG: toFloat(csvLine8.LONG), ID: toInteger(csvLine8.ID), G:8, QUARTIER:'Saint-Laurent', SIT:'Ouest'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ9.1.csv" AS csvLine9 FIELDTERMINATOR ';'
+CREATE (P9M:PDQ9M { CATEGORIE: csvLine9.CATEGORIE, DATE: csvLine9.DATE, QUART: csvLine9.QUART, PDQ: toInteger(csvLine9.PDQ), LAT: toFloat(csvLine9.LAT), LONG: toFloat(csvLine9.LONG), ID: toInteger(csvLine9.ID), G:8, QUARTIER:'Côte Saint-Luc, Hampstead, Montréal-Ouest', SIT:'Ouest'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ10.1.csv" AS csvLine10 FIELDTERMINATOR ';'
+CREATE (P10M:PDQ10M { CATEGORIE: csvLine10.CATEGORIE, DATE: csvLine10.DATE, QUART: csvLine10.QUART, PDQ: toInteger(csvLine10.PDQ), LAT: toFloat(csvLine10.LAT), LONG: toFloat(csvLine10.LONG), ID: toInteger(csvLine10.ID), G:5, QUARTIER:'Bordeaux, Cartierville', SIT:'Nord'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ11.1.csv" AS csvLine11 FIELDTERMINATOR ';'
+CREATE (P11M:PDQ11M { CATEGORIE: csvLine11.CATEGORIE, DATE: csvLine11.DATE, QUART: csvLine11.QUART, PDQ: toInteger(csvLine11.PDQ), LAT: toFloat(csvLine11.LAT), LONG: toFloat(csvLine11.LONG), ID: toInteger(csvLine11.ID), G:8, QUARTIER:'Notre-Dame-de-Grâce', SIT:'Ouest'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ12.1.csv" AS csvLine12 FIELDTERMINATOR ';'
+CREATE (P12M:PDQ12M { CATEGORIE: csvLine12.CATEGORIE, DATE: csvLine12.DATE, QUART: csvLine12.QUART, PDQ: toInteger(csvLine12.PDQ), LAT: toFloat(csvLine12.LAT), LONG: toFloat(csvLine12.LONG), ID: toInteger(csvLine12.ID), G:11, QUARTIER:'Ville-Marie Ouest, Westmount', SIT:'Sud'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ13.1.csv" AS csvLine13 FIELDTERMINATOR ';'
+CREATE (P13M:PDQ13M { CATEGORIE: csvLine13.CATEGORIE, DATE: csvLine13.DATE, QUART: csvLine13.QUART, PDQ: toInteger(csvLine13.PDQ), LAT: toFloat(csvLine13.LAT), LONG: toFloat(csvLine13.LONG), ID: toInteger(csvLine13.ID), G:8, QUARTIER:'LaSalle', SIT:'Ouest'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ15.1.csv" AS csvLine15 FIELDTERMINATOR ';'
+CREATE (P15M:PDQ15M { CATEGORIE: csvLine15.CATEGORIE, DATE: csvLine15.DATE, QUART: csvLine15.QUART, PDQ: toInteger(csvLine15.PDQ), LAT: toFloat(csvLine15.LAT), LONG: toFloat(csvLine15.LONG), ID: toInteger(csvLine15.ID), G:11, QUARTIER:'Saint-Paul, Petite-Bourgogne, Pointe-Saint-Charles, Saint-Henri, Ville-Émard', SIT:'Sud'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ16.1.csv" AS csvLine16 FIELDTERMINATOR ';'
+CREATE (P16M:PDQ16M { CATEGORIE: csvLine16.CATEGORIE, DATE: csvLine16.DATE, QUART: csvLine16.QUART, PDQ: toInteger(csvLine16.PDQ), LAT: toFloat(csvLine16.LAT), LONG: toFloat(csvLine16.LONG), ID: toInteger(csvLine16.ID), G:11, QUARTIER:'Île-des-Sœurs, Verdun', SIT:'Sud'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ20.1.csv" AS csvLine20 FIELDTERMINATOR ';'
+CREATE (P20M:PDQ20M { CATEGORIE: csvLine20.CATEGORIE, DATE: csvLine20.DATE, QUART: csvLine20.QUART, PDQ: toInteger(csvLine20.PDQ), LAT: toFloat(csvLine20.LAT), LONG: toFloat(csvLine20.LONG), ID: toInteger(csvLine20.ID), G:11, QUARTIER:'Centre-Ville (Ville-Marie Ouest), Parc du Mont-Royal', SIT:'Sud'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ2150.1.csv" AS csvLine2150 FIELDTERMINATOR ';'
+CREATE (P2150M:PDQ2150M { CATEGORIE: csvLine2150.CATEGORIE, DATE: csvLine2150.DATE, QUART: csvLine2150.QUART, PDQ: toInteger(csvLine2150.PDQ), LAT: toFloat(csvLine2150.LAT), LONG: toFloat(csvLine2150.LONG), ID: toInteger(csvLine2150.ID), G:11, QUARTIER:'Centre-Ville(Ville-Marie Est), Île Notre-Dame, Île Sainte-Hélène, Vieux-Montréal, Métro de Montréal', SIT:'Sud'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ22.1.csv" AS csvLine22 FIELDTERMINATOR ';'
+CREATE (P22M:PDQ22M { CATEGORIE: csvLine22.CATEGORIE, DATE: csvLine22.DATE, QUART: csvLine22.QUART, PDQ: toInteger(csvLine22.PDQ), LAT: toFloat(csvLine22.LAT), LONG: toFloat(csvLine22.LONG), ID: toInteger(csvLine22.ID), G:11, QUARTIER:'Centre-Sud', SIT:'Sud'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ23.1.csv" AS csvLine23 FIELDTERMINATOR ';'
+CREATE (P23M:PDQ23M { CATEGORIE: csvLine23.CATEGORIE, DATE: csvLine23.DATE, QUART: csvLine23.QUART, PDQ: toInteger(csvLine23.PDQ), LAT: toFloat(csvLine23.LAT), LONG: toFloat(csvLine23.LONG), ID: toInteger(csvLine23.ID), G:2, QUARTIER:'Hochelaga-Maisonneuve', SIT:'Est'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ24.1.csv" AS csvLine24 FIELDTERMINATOR ';'
+CREATE (P24M:PDQ24M { CATEGORIE: csvLine24.CATEGORIE, DATE: csvLine24.DATE, QUART: csvLine24.QUART, PDQ: toInteger(csvLine24.PDQ), LAT: toFloat(csvLine24.LAT), LONG: toFloat(csvLine24.LONG), ID: toInteger(csvLine24.ID), G:5, QUARTIER:'Mont-Royal, Outremont', SIT:'Nord'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ26.1.csv" AS csvLine26 FIELDTERMINATOR ';'
+CREATE (P26M:PDQ26M { CATEGORIE: csvLine26.CATEGORIE, DATE: csvLine26.DATE, QUART: csvLine26.QUART, PDQ: toInteger(csvLine26.PDQ), LAT: toFloat(csvLine26.LAT), LONG: toFloat(csvLine26.LONG), ID: toInteger(csvLine26.ID), G:8, QUARTIER:'Côte-des-Neiges-Ouest', SIT:'Ouest'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ27.1.csv" AS csvLine27 FIELDTERMINATOR ';'
+CREATE (P27M:PDQ27M { CATEGORIE: csvLine27.CATEGORIE, DATE: csvLine27.DATE, QUART: csvLine27.QUART, PDQ: toInteger(csvLine27.PDQ), LAT: toFloat(csvLine27.LAT), LONG: toFloat(csvLine27.LONG), ID: toInteger(csvLine27.ID), G:5, QUARTIER:'Ahuntsic', SIT:'Nord'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ30.1.csv" AS csvLine30 FIELDTERMINATOR ';'
+CREATE (P30M:PDQ30M { CATEGORIE: csvLine30.CATEGORIE, DATE: csvLine30.DATE, QUART: csvLine30.QUART, PDQ: toInteger(csvLine30.PDQ), LAT: toFloat(csvLine30.LAT), LONG: toFloat(csvLine30.LONG), ID: toInteger(csvLine30.ID), G:5, QUARTIER:'Saint-Michel', SIT:'Nord'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ31.1.csv" AS csvLine31 FIELDTERMINATOR ';'
+CREATE (P31M:PDQ31M { CATEGORIE: csvLine31.CATEGORIE, DATE: csvLine31.DATE, QUART: csvLine31.QUART, PDQ: toInteger(csvLine31.PDQ), LAT: toFloat(csvLine31.LAT), LONG: toFloat(csvLine31.LONG), ID: toInteger(csvLine31.ID), G:5, QUARTIER:'Villeray', SIT:'Nord'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ33.1.csv" AS csvLine33 FIELDTERMINATOR ';'
+CREATE (P33M:PDQ33M { CATEGORIE: csvLine33.CATEGORIE, DATE: csvLine33.DATE, QUART: csvLine33.QUART, PDQ: toInteger(csvLine33.PDQ), LAT: toFloat(csvLine33.LAT), LONG: toFloat(csvLine33.LONG), ID: toInteger(csvLine33.ID), G:5, QUARTIER:'Parc-Extension', SIT:'Nord'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ35.1.csv" AS csvLine35 FIELDTERMINATOR ';'
+CREATE (P35M:PDQ35M { CATEGORIE: csvLine35.CATEGORIE, DATE: csvLine35.DATE, QUART: csvLine35.QUART, PDQ: toInteger(csvLine35.PDQ), LAT: toFloat(csvLine35.LAT), LONG: toFloat(csvLine35.LONG), ID: toInteger(csvLine35.ID), G:5, QUARTIER:'La Petite-Italie, La petite-Patrie, Outremont(3 rues)', SIT:'Nord'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ38.1.csv" AS csvLine38 FIELDTERMINATOR ';'
+CREATE (P38M:PDQ38M { CATEGORIE: csvLine38.CATEGORIE, DATE: csvLine38.DATE, QUART: csvLine38.QUART, PDQ: toInteger(csvLine38.PDQ), LAT: toFloat(csvLine38.LAT), LONG: toFloat(csvLine38.LONG), ID: toInteger(csvLine38.ID), G:5, QUARTIER:'Le Plateau-Mont-Royal', SIT:'Nord'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ39.1.csv" AS csvLine39 FIELDTERMINATOR ';'
+CREATE (P39M:PDQ39M { CATEGORIE: csvLine39.CATEGORIE, DATE: csvLine39.DATE, QUART: csvLine39.QUART, PDQ: toInteger(csvLine39.PDQ), LAT: toFloat(csvLine39.LAT), LONG: toFloat(csvLine39.LONG), ID: toInteger(csvLine39.ID), G:2, QUARTIER:'Arrondissement de Montréal-Nord', SIT:'Est'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ42.1.csv" AS csvLine42 FIELDTERMINATOR ';'
+CREATE (P42M:PDQ42M { CATEGORIE: csvLine42.CATEGORIE, DATE: csvLine42.DATE, QUART: csvLine42.QUART, PDQ: toInteger(csvLine42.PDQ), LAT: toFloat(csvLine42.LAT), LONG: toFloat(csvLine42.LONG), ID: toInteger(csvLine42.ID), G:2, QUARTIER:'Saint-Léonard', SIT:'Est'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ44.1.csv" AS csvLine44 FIELDTERMINATOR ';'
+CREATE (P44M:PDQ44M { CATEGORIE: csvLine44.CATEGORIE, DATE: csvLine44.DATE, QUART: csvLine44.QUART, PDQ: toInteger(csvLine44.PDQ), LAT: toFloat(csvLine44.LAT), LONG: toFloat(csvLine44.LONG), ID: toInteger(csvLine44.ID), G:5, QUARTIER:'Rosemont - La Petite-Patrie', SIT:'Nord'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ45.1.csv" AS csvLine45 FIELDTERMINATOR ';'
+CREATE (P45M:PDQ45M { CATEGORIE: csvLine45.CATEGORIE, DATE: csvLine45.DATE, QUART: csvLine45.QUART, PDQ: toInteger(csvLine45.PDQ), LAT: toFloat(csvLine45.LAT), LONG: toFloat(csvLine45.LONG), ID: toInteger(csvLine45.ID), G:2, QUARTIER:'Rivière-des-Prairies', SIT:'Est'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ46.1.csv" AS csvLine46 FIELDTERMINATOR ';'
+CREATE (P46M:PDQ46M { CATEGORIE: csvLine46.CATEGORIE, DATE: csvLine46.DATE, QUART: csvLine46.QUART, PDQ: toInteger(csvLine46.PDQ), LAT: toFloat(csvLine46.LAT), LONG: toFloat(csvLine46.LONG), ID: toInteger(csvLine46.ID), G:2, QUARTIER:'Anjou', SIT:'Est'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ48.1.csv" AS csvLine48 FIELDTERMINATOR ';'
+CREATE (P48M:PDQ48M { CATEGORIE: csvLine48.CATEGORIE, DATE: csvLine48.DATE, QUART: csvLine48.QUART, PDQ: toInteger(csvLine48.PDQ), LAT: toFloat(csvLine48.LAT), LONG: toFloat(csvLine48.LONG), ID: toInteger(csvLine48.ID), G:2, QUARTIER:'Arrondissement de Mercier-Hochelaga-Maisonneuve', SIT:'Est'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ49.1.csv" AS csvLine49 FIELDTERMINATOR ';'
+CREATE (P49M:PDQ49M { CATEGORIE: csvLine49.CATEGORIE, DATE: csvLine49.DATE, QUART: csvLine49.QUART, PDQ: toInteger(csvLine49.PDQ), LAT: toFloat(csvLine49.LAT), LONG: toFloat(csvLine49.LONG), ID: toInteger(csvLine49.ID), G:2, QUARTIER:'Montréal-Est, Pointe-Aux-Trembles', SIT:'Est'})
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+PERIODE 3 : 21-25 - N
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ1.2.csv" AS line FIELDTERMINATOR ';'
+CREATE (P1N:PDQ1N { CATEGORIE: line.CATEGORIE, DATE: line.DATE, QUART: line.QUART, PDQ: toInteger(line.PDQ), LAT: toFloat(line.LAT), LONG: toFloat(line.LONG), ID: toInteger(line.ID), G:9, QUARTIER:'Baie-DUrfé, Beaconsfield, Kirkland, Sainte-Anne-de-Bellevue, Senneville',SIT:'Ouest' })
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ3.2.csv" AS csvLine3 FIELDTERMINATOR ';'
+CREATE (P3N:PDQ3N { CATEGORIE: csvLine3.CATEGORIE, DATE: csvLine3.DATE, QUART: csvLine3.QUART, PDQ: toInteger(csvLine3.PDQ), LAT: toFloat(csvLine3.LAT), LONG: toFloat(csvLine3.LONG), ID: toInteger(csvLine3.ID), G:9, QUARTIER:'LÎle-Bizard, Pierrefonds, Sainte-Geneviève, Roxboro', SIT:'Ouest'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ4.2.csv" AS csvLine4 FIELDTERMINATOR ';'
+CREATE (P4N:PDQ4N { CATEGORIE: csvLine4.CATEGORIE, DATE: csvLine4.DATE, QUART: csvLine4.QUART, PDQ: toInteger(csvLine4.PDQ), LAT: toFloat(csvLine4.LAT), LONG: toFloat(csvLine4.LONG), ID: toInteger(csvLine4.ID), G:9, QUARTIER:'Dollard-Des Ormeaux', SIT:'Ouest'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ555.2.csv" AS csvLine555 FIELDTERMINATOR ';'
+CREATE (P5N:PDQ555N { CATEGORIE: csvLine555.CATEGORIE, DATE: csvLine555.DATE, QUART: csvLine555.QUART, PDQ: toInteger(csvLine555.PDQ), LAT: toFloat(csvLine555.LAT), LONG: toFloat(csvLine555.LONG), ID: toInteger(csvLine555.ID), G:9, QUARTIER:'Dorval, LÎle-Dorval, Pointe-Claire, Aéroport International Pierre-Elliot-Trudeau de Montréal', SIT:'Ouest'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ7.2.csv" AS csvLine7 FIELDTERMINATOR ';'
+CREATE (P7N:PDQ7N { CATEGORIE: csvLine7.CATEGORIE, DATE: csvLine7.DATE, QUART: csvLine7.QUART, PDQ: toInteger(csvLine7.PDQ), LAT: toFloat(csvLine7.LAT), LONG: toFloat(csvLine7.LONG), ID: toInteger(csvLine7.ID), G:9, QUARTIER:'Saint-Laurent', SIT:'Ouest'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ8.2.csv" AS csvLine8 FIELDTERMINATOR ';'
+CREATE (P8N:PDQ8N { CATEGORIE: csvLine8.CATEGORIE, DATE: csvLine8.DATE, QUART: csvLine8.QUART, PDQ: toInteger(csvLine8.PDQ), LAT: toFloat(csvLine8.LAT), LONG: toFloat(csvLine8.LONG), ID: toInteger(csvLine8.ID), G:9, QUARTIER:'Saint-Laurent', SIT:'Ouest'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ9.2.csv" AS csvLine9 FIELDTERMINATOR ';'
+CREATE (P9N:PDQ9N { CATEGORIE: csvLine9.CATEGORIE, DATE: csvLine9.DATE, QUART: csvLine9.QUART, PDQ: toInteger(csvLine9.PDQ), LAT: toFloat(csvLine9.LAT), LONG: toFloat(csvLine9.LONG), ID: toInteger(csvLine9.ID), G:9, QUARTIER:'Côte Saint-Luc, Hampstead, Montréal-Ouest', SIT:'Ouest'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ10.2.csv" AS csvLine10 FIELDTERMINATOR ';'
+CREATE (P10N:PDQ10N { CATEGORIE: csvLine10.CATEGORIE, DATE: csvLine10.DATE, QUART: csvLine10.QUART, PDQ: toInteger(csvLine10.PDQ), LAT: toFloat(csvLine10.LAT), LONG: toFloat(csvLine10.LONG), ID: toInteger(csvLine10.ID), G:6, QUARTIER:'Bordeaux, Cartierville', SIT:'Nord'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ11.2.csv" AS csvLine11 FIELDTERMINATOR ';'
+CREATE (P11N:PDQ11N { CATEGORIE: csvLine11.CATEGORIE, DATE: csvLine11.DATE, QUART: csvLine11.QUART, PDQ: toInteger(csvLine11.PDQ), LAT: toFloat(csvLine11.LAT), LONG: toFloat(csvLine11.LONG), ID: toInteger(csvLine11.ID), G:9, QUARTIER:'Notre-Dame-de-Grâce', SIT:'Ouest'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ12.2.csv" AS csvLine12 FIELDTERMINATOR ';'
+CREATE (P12N:PDQ12N { CATEGORIE: csvLine12.CATEGORIE, DATE: csvLine12.DATE, QUART: csvLine12.QUART, PDQ: toInteger(csvLine12.PDQ), LAT: toFloat(csvLine12.LAT), LONG: toFloat(csvLine12.LONG), ID: toInteger(csvLine12.ID), G:12, QUARTIER:'Ville-Marie Ouest, Westmount', SIT:'Sud'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ13.2.csv" AS csvLine13 FIELDTERMINATOR ';'
+CREATE (P13N:PDQ13N { CATEGORIE: csvLine13.CATEGORIE, DATE: csvLine13.DATE, QUART: csvLine13.QUART, PDQ: toInteger(csvLine13.PDQ), LAT: toFloat(csvLine13.LAT), LONG: toFloat(csvLine13.LONG), ID: toInteger(csvLine13.ID), G:9, QUARTIER:'LaSalle', SIT:'Ouest'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ15.2.csv" AS csvLine15 FIELDTERMINATOR ';'
+CREATE (P15N:PDQ15N { CATEGORIE: csvLine15.CATEGORIE, DATE: csvLine15.DATE, QUART: csvLine15.QUART, PDQ: toInteger(csvLine15.PDQ), LAT: toFloat(csvLine15.LAT), LONG: toFloat(csvLine15.LONG), ID: toInteger(csvLine15.ID), G:12, QUARTIER:'Saint-Paul, Petite-Bourgogne, Pointe-Saint-Charles, Saint-Henri, Ville-Émard', SIT:'Sud'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ16.2.csv" AS csvLine16 FIELDTERMINATOR ';'
+CREATE (P16N:PDQ16N { CATEGORIE: csvLine16.CATEGORIE, DATE: csvLine16.DATE, QUART: csvLine16.QUART, PDQ: toInteger(csvLine16.PDQ), LAT: toFloat(csvLine16.LAT), LONG: toFloat(csvLine16.LONG), ID: toInteger(csvLine16.ID), G:12, QUARTIER:'Île-des-Sœurs, Verdun', SIT:'Sud'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ20.2.csv" AS csvLine20 FIELDTERMINATOR ';'
+CREATE (P20N:PDQ20N { CATEGORIE: csvLine20.CATEGORIE, DATE: csvLine20.DATE, QUART: csvLine20.QUART, PDQ: toInteger(csvLine20.PDQ), LAT: toFloat(csvLine20.LAT), LONG: toFloat(csvLine20.LONG), ID: toInteger(csvLine20.ID), G:12, QUARTIER:'Centre-Ville (Ville-Marie Ouest), Parc du Mont-Royal', SIT:'Sud'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ2150.2.csv" AS csvLine2150 FIELDTERMINATOR ';'
+CREATE (P2150N:PDQ2150N { CATEGORIE: csvLine2150.CATEGORIE, DATE: csvLine2150.DATE, QUART: csvLine2150.QUART, PDQ: toInteger(csvLine2150.PDQ), LAT: toFloat(csvLine2150.LAT), LONG: toFloat(csvLine2150.LONG), ID: toInteger(csvLine2150.ID), G:12, QUARTIER:'Centre-Ville(Ville-Marie Est), Île Notre-Dame, Île Sainte-Hélène, Vieux-Montréal, Métro de Montréal', SIT:'Sud'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ22.2.csv" AS csvLine22 FIELDTERMINATOR ';'
+CREATE (P22N:PDQ22N { CATEGORIE: csvLine22.CATEGORIE, DATE: csvLine22.DATE, QUART: csvLine22.QUART, PDQ: toInteger(csvLine22.PDQ), LAT: toFloat(csvLine22.LAT), LONG: toFloat(csvLine22.LONG), ID: toInteger(csvLine22.ID), G:12, QUARTIER:'Centre-Sud', SIT:'Sud'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ23.2.csv" AS csvLine23 FIELDTERMINATOR ';'
+CREATE (P23N:PDQ23N { CATEGORIE: csvLine23.CATEGORIE, DATE: csvLine23.DATE, QUART: csvLine23.QUART, PDQ: toInteger(csvLine23.PDQ), LAT: toFloat(csvLine23.LAT), LONG: toFloat(csvLine23.LONG), ID: toInteger(csvLine23.ID), G:3, QUARTIER:'Hochelaga-Maisonneuve', SIT:'Est'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ24.2.csv" AS csvLine24 FIELDTERMINATOR ';'
+CREATE (P24N:PDQ24N { CATEGORIE: csvLine24.CATEGORIE, DATE: csvLine24.DATE, QUART: csvLine24.QUART, PDQ: toInteger(csvLine24.PDQ), LAT: toFloat(csvLine24.LAT), LONG: toFloat(csvLine24.LONG), ID: toInteger(csvLine24.ID), G:6, QUARTIER:'Mont-Royal, Outremont', SIT:'Nord'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ26.2.csv" AS csvLine26 FIELDTERMINATOR ';'
+CREATE (P26N:PDQ26N { CATEGORIE: csvLine26.CATEGORIE, DATE: csvLine26.DATE, QUART: csvLine26.QUART, PDQ: toInteger(csvLine26.PDQ), LAT: toFloat(csvLine26.LAT), LONG: toFloat(csvLine26.LONG), ID: toInteger(csvLine26.ID), G:9, QUARTIER:'Côte-des-Neiges-Ouest', SIT:'Ouest'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ27.2.csv" AS csvLine27 FIELDTERMINATOR ';'
+CREATE (P27N:PDQ27N { CATEGORIE: csvLine27.CATEGORIE, DATE: csvLine27.DATE, QUART: csvLine27.QUART, PDQ: toInteger(csvLine27.PDQ), LAT: toFloat(csvLine27.LAT), LONG: toFloat(csvLine27.LONG), ID: toInteger(csvLine27.ID), G:6, QUARTIER:'Ahuntsic', SIT:'Nord'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ30.2.csv" AS csvLine30 FIELDTERMINATOR ';'
+CREATE (P30N:PDQ30N { CATEGORIE: csvLine30.CATEGORIE, DATE: csvLine30.DATE, QUART: csvLine30.QUART, PDQ: toInteger(csvLine30.PDQ), LAT: toFloat(csvLine30.LAT), LONG: toFloat(csvLine30.LONG), ID: toInteger(csvLine30.ID), G:6, QUARTIER:'Saint-Michel', SIT:'Nord'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ31.2.csv" AS csvLine31 FIELDTERMINATOR ';'
+CREATE (P31N:PDQ31N { CATEGORIE: csvLine31.CATEGORIE, DATE: csvLine31.DATE, QUART: csvLine31.QUART, PDQ: toInteger(csvLine31.PDQ), LAT: toFloat(csvLine31.LAT), LONG: toFloat(csvLine31.LONG), ID: toInteger(csvLine31.ID), G:6, QUARTIER:'Villeray', SIT:'Nord'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ33.2.csv" AS csvLine33 FIELDTERMINATOR ';'
+CREATE (P33N:PDQ33N { CATEGORIE: csvLine33.CATEGORIE, DATE: csvLine33.DATE, QUART: csvLine33.QUART, PDQ: toInteger(csvLine33.PDQ), LAT: toFloat(csvLine33.LAT), LONG: toFloat(csvLine33.LONG), ID: toInteger(csvLine33.ID), G:6, QUARTIER:'Parc-Extension', SIT:'Nord'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ35.2.csv" AS csvLine35 FIELDTERMINATOR ';'
+CREATE (P35N:PDQ35N { CATEGORIE: csvLine35.CATEGORIE, DATE: csvLine35.DATE, QUART: csvLine35.QUART, PDQ: toInteger(csvLine35.PDQ), LAT: toFloat(csvLine35.LAT), LONG: toFloat(csvLine35.LONG), ID: toInteger(csvLine35.ID), G:6, QUARTIER:'La Petite-Italie, La petite-Patrie, Outremont(3 rues)', SIT:'Nord'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ38.2.csv" AS csvLine38 FIELDTERMINATOR ';'
+CREATE (P38N:PDQ38N { CATEGORIE: csvLine38.CATEGORIE, DATE: csvLine38.DATE, QUART: csvLine38.QUART, PDQ: toInteger(csvLine38.PDQ), LAT: toFloat(csvLine38.LAT), LONG: toFloat(csvLine38.LONG), ID: toInteger(csvLine38.ID), G:6, QUARTIER:'Le Plateau-Mont-Royal', SIT:'Nord'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ39.2.csv" AS csvLine39 FIELDTERMINATOR ';'
+CREATE (P39N:PDQ39N { CATEGORIE: csvLine39.CATEGORIE, DATE: csvLine39.DATE, QUART: csvLine39.QUART, PDQ: toInteger(csvLine39.PDQ), LAT: toFloat(csvLine39.LAT), LONG: toFloat(csvLine39.LONG), ID: toInteger(csvLine39.ID), G:3, QUARTIER:'Arrondissement de Montréal-Nord', SIT:'Est'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ42.2.csv" AS csvLine42 FIELDTERMINATOR ';'
+CREATE (P42N:PDQ42N { CATEGORIE: csvLine42.CATEGORIE, DATE: csvLine42.DATE, QUART: csvLine42.QUART, PDQ: toInteger(csvLine42.PDQ), LAT: toFloat(csvLine42.LAT), LONG: toFloat(csvLine42.LONG), ID: toInteger(csvLine42.ID), G:3, QUARTIER:'Saint-Léonard', SIT:'Est'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ44.2.csv" AS csvLine44 FIELDTERMINATOR ';'
+CREATE (P44N:PDQ44N { CATEGORIE: csvLine44.CATEGORIE, DATE: csvLine44.DATE, QUART: csvLine44.QUART, PDQ: toInteger(csvLine44.PDQ), LAT: toFloat(csvLine44.LAT), LONG: toFloat(csvLine44.LONG), ID: toInteger(csvLine44.ID), G:6, QUARTIER:'Rosemont - La Petite-Patrie', SIT:'Nord'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ45.2.csv" AS csvLine45 FIELDTERMINATOR ';'
+CREATE (P45N:PDQ45N { CATEGORIE: csvLine45.CATEGORIE, DATE: csvLine45.DATE, QUART: csvLine45.QUART, PDQ: toInteger(csvLine45.PDQ), LAT: toFloat(csvLine45.LAT), LONG: toFloat(csvLine45.LONG), ID: toInteger(csvLine45.ID), G:3, QUARTIER:'Rivière-des-Prairies', SIT:'Est'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ46.2.csv" AS csvLine46 FIELDTERMINATOR ';'
+CREATE (P46N:PDQ46N { CATEGORIE: csvLine46.CATEGORIE, DATE: csvLine46.DATE, QUART: csvLine46.QUART, PDQ: toInteger(csvLine46.PDQ), LAT: toFloat(csvLine46.LAT), LONG: toFloat(csvLine46.LONG), ID: toInteger(csvLine46.ID), G:3, QUARTIER:'Anjou', SIT:'Est'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ48.2.csv" AS csvLine48 FIELDTERMINATOR ';'
+CREATE (P48N:PDQ48N { CATEGORIE: csvLine48.CATEGORIE, DATE: csvLine48.DATE, QUART: csvLine48.QUART, PDQ: toInteger(csvLine48.PDQ), LAT: toFloat(csvLine48.LAT), LONG: toFloat(csvLine48.LONG), ID: toInteger(csvLine48.ID), G:3, QUARTIER:'Arrondissement de Mercier-Hochelaga-Maisonneuve', SIT:'Est'})
+
+LOAD CSV WITH HEADERS FROM "file:///PDQ49.2.csv" AS csvLine49 FIELDTERMINATOR ';'
+CREATE (P49N:PDQ49N { CATEGORIE: csvLine49.CATEGORIE, DATE: csvLine49.DATE, QUART: csvLine49.QUART, PDQ: toInteger(csvLine49.PDQ), LAT: toFloat(csvLine49.LAT), LONG: toFloat(csvLine49.LONG), ID: toInteger(csvLine49.ID), G:3, QUARTIER:'Montréal-Est, Pointe-Aux-Trembles', SIT:'Est'})
+
+- - - - - - - - - - - - - - - - - - - - - - - - - -- - - - - - - - - - - - - - - - - - - -
+RELATIONS DEDOUBLONNÉES
+
+PERIODE 1 : 
+
+NORD : 
+
+MATCH (P10:PDQ10),(P24:PDQ24) CREATE (P10)-[r:RELATED_TO]->(P24)
+MATCH (P10:PDQ10),(P27:PDQ27) CREATE (P10)-[r:RELATED_TO]->(P27)
+MATCH (P10:PDQ10),(P31:PDQ31) CREATE (P10)-[r:RELATED_TO]->(P31)
+MATCH (P10:PDQ10),(P33:PDQ33) CREATE (P10)-[r:RELATED_TO]->(P33)
+
+MATCH (P24:PDQ24),(P33:PDQ33) CREATE (P24)-[r:RELATED_TO]->(P33)
+MATCH (P24:PDQ24),(P35:PDQ35) CREATE (P24)-[r:RELATED_TO]->(P35)
+MATCH (P24:PDQ24),(P38:PDQ38) CREATE (P24)-[r:RELATED_TO]->(P38)
+
+MATCH (P27:PDQ27),(P30:PDQ30) CREATE (P27)-[r:RELATED_TO]->(P30)
+MATCH (P27:PDQ27),(P31:PDQ31) CREATE (P27)-[r:RELATED_TO]->(P31)
+MATCH (P27:PDQ27),(P33:PDQ33) CREATE (P27)-[r:RELATED_TO]->(P33)
+
+MATCH (P30:PDQ30),(P31:PDQ31) CREATE (P30)-[r:RELATED_TO]->(P31)
+MATCH (P30:PDQ30),(P35:PDQ35) CREATE (P30)-[r:RELATED_TO]->(P35)
+MATCH (P30:PDQ30),(P44:PDQ44) CREATE (P30)-[r:RELATED_TO]->(P44)
+
+MATCH (P31:PDQ31),(P33:PDQ33) CREATE (P31)-[r:RELATED_TO]->(P33)
+MATCH (P31:PDQ31),(P35:PDQ35) CREATE (P31)-[r:RELATED_TO]->(P35)
+MATCH (P31:PDQ31),(P44:PDQ44) CREATE (P31)-[r:RELATED_TO]->(P44)
+
+MATCH (P33:PDQ33),(P35:PDQ35) CREATE (P33)-[r:RELATED_TO]->(P35)
+
+MATCH (P35:PDQ35),(P38:PDQ38) CREATE (P35)-[r:RELATED_TO]->(P38)
+MATCH (P35:PDQ35),(P44:PDQ44) CREATE (P35)-[r:RELATED_TO]->(P44)
+
+MATCH (P38:PDQ38),(P44:PDQ44) CREATE (P38)-[r:RELATED_TO]->(P44)
+
+MATCH (P44:PDQ44),(P38:PDQ38) CREATE (P44)-[r:RELATED_TO]->(P38)
+
+
+Sud : 
+
+MATCH (P12:PDQ12),(P15:PDQ15) CREATE (P12)-[r:RELATED_TO]->(P15)
+MATCH (P12:PDQ12),(P20:PDQ20) CREATE (P12)-[r:RELATED_TO]->(P20)
+
+MATCH (P15:PDQ15),(P16:PDQ16) CREATE (P15)-[r:RELATED_TO]->(P16)
+MATCH (P15:PDQ15),(P20:PDQ20) CREATE (P15)-[r:RELATED_TO]->(P20)
+MATCH (P15:PDQ15),(P2150:PDQ2150) CREATE (P15)-[r:RELATED_TO]->(P2150)
+
+MATCH (P20:PDQ20),(P2150:PDQ2150) CREATE (P20)-[r:RELATED_TO]->(P2150)
+
+MATCH (P2150:PDQ2150),(P22:PDQ22) CREATE (P2150)-[r:RELATED_TO]->(P22)
+
+
+Est : 
+
+MATCH (P23:PDQ23),(P48:PDQ48) CREATE (P23)-[r:RELATED_TO]->(P48)
+
+MATCH (P39:PDQ39),(P42:PDQ42) CREATE (P39)-[r:RELATED_TO]->(P42)
+MATCH (P39:PDQ39),(P45:PDQ45) CREATE (P39)-[r:RELATED_TO]->(P45)
+MATCH (P39:PDQ39),(P46:PDQ46) CREATE (P39)-[r:RELATED_TO]->(P46)
+
+MATCH (P42:PDQ42),(P45:PDQ45) CREATE (P42)-[r:RELATED_TO]->(P45)
+MATCH (P42:PDQ42),(P46:PDQ46) CREATE (P42)-[r:RELATED_TO]->(P46)
+MATCH (P42:PDQ42),(P48:PDQ48) CREATE (P42)-[r:RELATED_TO]->(P48)
+
+MATCH (P45:PDQ45),(P46:PDQ46) CREATE (P45)-[r:RELATED_TO]->(P46)
+MATCH (P45:PDQ45),(P49:PDQ49) CREATE (P45)-[r:RELATED_TO]->(P49)
+
+MATCH (P46:PDQ46),(P48:PDQ48) CREATE (P46)-[r:RELATED_TO]->(P48)
+MATCH (P46:PDQ46),(P49:PDQ49) CREATE (P46)-[r:RELATED_TO]->(P49)
+
+MATCH (P48:PDQ48),(P49:PDQ49) CREATE (P48)-[r:RELATED_TO]->(P49)
+
+
+Ouest :
+
+MATCH (P1:PDQ1),(P3:PDQ3) CREATE (P1)-[r:RELATED_TO]->(P3)
+MATCH (P1:PDQ1),(P4:PDQ4) CREATE (P1)-[r:RELATED_TO]->(P4)
+MATCH (P1:PDQ1),(P555:PDQ555) CREATE (P1)-[r:RELATED_TO]->(P555)
+
+MATCH (P3:PDQ3),(P4:PDQ4) CREATE (P3)-[r:RELATED_TO]->(P4)
+MATCH (P3:PDQ3),(P7:PDQ7) CREATE (P3)-[r:RELATED_TO]->(P7)
+
+MATCH (P4:PDQ4),(P555:PDQ555) CREATE (P4)-[r:RELATED_TO]->(P555)
+MATCH (P4:PDQ4),(P7:PDQ7) CREATE (P4)-[r:RELATED_TO]->(P7)
+
+MATCH (P555:PDQ555),(P7:PDQ7) CREATE (P555)-[r:RELATED_TO]->(P7)
+MATCH (P555:PDQ555),(P8:PDQ8) CREATE (P555)-[r:RELATED_TO]->(P8)
+
+MATCH (P7:PDQ7),(P8:PDQ8) CREATE (P7)-[r:RELATED_TO]->(P8)
+MATCH (P7:PDQ7),(P9:PDQ9) CREATE (P7)-[r:RELATED_TO]->(P9)
+MATCH (P7:PDQ7),(P26:PDQ26) CREATE (P7)-[r:RELATED_TO]->(P26)
+
+MATCH (P8:PDQ8),(P9:PDQ9) CREATE (P8)-[r:RELATED_TO]->(P9)
+MATCH (P8:PDQ8),(P13:PDQ13) CREATE (P8)-[r:RELATED_TO]->(P13)
+
+MATCH (P9:PDQ9),(P11:PDQ11) CREATE (P9)-[r:RELATED_TO]->(P11)
+MATCH (P9:PDQ9),(P26:PDQ26) CREATE (P9)-[r:RELATED_TO]->(P26)
+
+MATCH (P11:PDQ11),(P26:PDQ26) CREATE (P11)-[r:RELATED_TO]->(P26)
+
+
+-----------
+
+PERIODE 2 :
+
+NORD : 
+
+MATCH (P10M:PDQ10M),(P24M:PDQ24M) CREATE (P10M)-[r:RELATED_TO]->(P24M)
+MATCH (P10M:PDQ10M),(P27M:PDQ27M) CREATE (P10M)-[r:RELATED_TO]->(P27M)
+MATCH (P10M:PDQ10M),(P31M:PDQ31M) CREATE (P10M)-[r:RELATED_TO]->(P31M)
+MATCH (P10M:PDQ10M),(P33M:PDQ33M) CREATE (P10M)-[r:RELATED_TO]->(P33M)
+
+MATCH (P24M:PDQ24M),(P33M:PDQ33M) CREATE (P24M)-[r:RELATED_TO]->(P33M)
+MATCH (P24M:PDQ24M),(P35M:PDQ35M) CREATE (P24M)-[r:RELATED_TO]->(P35M)
+MATCH (P24M:PDQ24M),(P38M:PDQ38M) CREATE (P24M)-[r:RELATED_TO]->(P38M)
+
+MATCH (P27M:PDQ27M),(P30M:PDQ30M) CREATE (P27M)-[r:RELATED_TO]->(P30M)
+MATCH (P27M:PDQ27M),(P31M:PDQ31M) CREATE (P27M)-[r:RELATED_TO]->(P31M)
+MATCH (P27M:PDQ27M),(P33M:PDQ33M) CREATE (P27M)-[r:RELATED_TO]->(P33M)
+
+MATCH (P30M:PDQ30M),(P31M:PDQ31M) CREATE (P30M)-[r:RELATED_TO]->(P31M)
+MATCH (P30M:PDQ30M),(P35M:PDQ35M) CREATE (P30M)-[r:RELATED_TO]->(P35M)
+MATCH (P30M:PDQ30M),(P44M:PDQ44M) CREATE (P30M)-[r:RELATED_TO]->(P44M)
+
+MATCH (P31M:PDQ31M),(P33M:PDQ33M) CREATE (P31M)-[r:RELATED_TO]->(P33M)
+MATCH (P31M:PDQ31M),(P35M:PDQ35M) CREATE (P31M)-[r:RELATED_TO]->(P35M)
+MATCH (P31M:PDQ31M),(P44M:PDQ44M) CREATE (P31M)-[r:RELATED_TO]->(P44M)
+
+MATCH (P33M:PDQ33M),(P35M:PDQ35M) CREATE (P33M)-[r:RELATED_TO]->(P35M)
+
+MATCH (P35M:PDQ35M),(P38M:PDQ38M) CREATE (P35M)-[r:RELATED_TO]->(P38M)
+MATCH (P35M:PDQ35M),(P44M:PDQ44M) CREATE (P35M)-[r:RELATED_TO]->(P44M)
+
+MATCH (P38M:PDQ38M),(P44M:PDQ44M) CREATE (P38M)-[r:RELATED_TO]->(P44M)
+
+MATCH (P44M:PDQ44M),(P38M:PDQ38M) CREATE (P44M)-[r:RELATED_TO]->(P38M)
+
+
+Sud : 
+
+MATCH (P12M:PDQ12M),(P15M:PDQ15M) CREATE (P12M)-[r:RELATED_TO]->(P15M)
+MATCH (P12M:PDQ12M),(P20M:PDQ20M) CREATE (P12M)-[r:RELATED_TO]->(P20M)
+
+MATCH (P15M:PDQ15M),(P16M:PDQ16M) CREATE (P15M)-[r:RELATED_TO]->(P16M)
+MATCH (P15M:PDQ15M),(P20M:PDQ20M) CREATE (P15M)-[r:RELATED_TO]->(P20M)
+MATCH (P15M:PDQ15M),(P2150M:PDQ2150M) CREATE (P15M)-[r:RELATED_TO]->(P2150M)
+
+MATCH (P20M:PDQ20M),(P2150M:PDQ2150M) CREATE (P20M)-[r:RELATED_TO]->(P2150M)
+
+MATCH (P2150M:PDQ2150M),(P22M:PDQ22M) CREATE (P2150M)-[r:RELATED_TO]->(P22M)
+
+
+Est : 
+
+MATCH (P23M:PDQ23M),(P48M:PDQ48M) CREATE (P23M)-[r:RELATED_TO]->(P48M)
+
+MATCH (P39M:PDQ39M),(P42M:PDQ42M) CREATE (P39M)-[r:RELATED_TO]->(P42M)
+MATCH (P39M:PDQ39M),(P45M:PDQ45M) CREATE (P39M)-[r:RELATED_TO]->(P45M)
+MATCH (P39M:PDQ39M),(P46M:PDQ46M) CREATE (P39M)-[r:RELATED_TO]->(P46M)
+
+MATCH (P42M:PDQ42M),(P45M:PDQ45M) CREATE (P42M)-[r:RELATED_TO]->(P45M)
+MATCH (P42M:PDQ42M),(P46M:PDQ46M) CREATE (P42M)-[r:RELATED_TO]->(P46M)
+MATCH (P42M:PDQ42M),(P48M:PDQ48M) CREATE (P42M)-[r:RELATED_TO]->(P48M)
+
+MATCH (P45M:PDQ45M),(P46M:PDQ46M) CREATE (P45M)-[r:RELATED_TO]->(P46M)
+MATCH (P45M:PDQ45M),(P49M:PDQ49M) CREATE (P45M)-[r:RELATED_TO]->(P49M)
+
+MATCH (P46M:PDQ46M),(P48M:PDQ48M) CREATE (P46M)-[r:RELATED_TO]->(P48M)
+MATCH (P46M:PDQ46M),(P49M:PDQ49M) CREATE (P46M)-[r:RELATED_TO]->(P49M)
+
+MATCH (P48M:PDQ48M),(P49M:PDQ49M) CREATE (P48M)-[r:RELATED_TO]->(P49M)
+
+
+Ouest :
+
+MATCH (P1M:PDQ1M),(P3M:PDQ3M) CREATE (P1M)-[r:RELATED_TO]->(P3M)
+MATCH (P1M:PDQ1M),(P4M:PDQ4M) CREATE (P1M)-[r:RELATED_TO]->(P4M)
+MATCH (P1M:PDQ1M),(P555M:PDQ555M) CREATE (P1M)-[r:RELATED_TO]->(P555M)
+
+MATCH (P3M:PDQ3M),(P4M:PDQ4M) CREATE (P3M)-[r:RELATED_TO]->(P4M)
+MATCH (P3M:PDQ3M),(P7M:PDQ7M) CREATE (P3M)-[r:RELATED_TO]->(P7M)
+
+MATCH (P4M:PDQ4M),(P555M:PDQ555M) CREATE (P4M)-[r:RELATED_TO]->(P555M)
+MATCH (P4M:PDQ4M),(P7M:PDQ7M) CREATE (P4M)-[r:RELATED_TO]->(P7M)
+
+MATCH (P555M:PDQ555M),(P7M:PDQ7M) CREATE (P555M)-[r:RELATED_TO]->(P7M)
+MATCH (P555M:PDQ555M),(P8M:PDQ8M) CREATE (P555M)-[r:RELATED_TO]->(P8M)
+
+MATCH (P7M:PDQ7M),(P8M:PDQ8M) CREATE (P7M)-[r:RELATED_TO]->(P8M)
+MATCH (P7M:PDQ7M),(P9M:PDQ9M) CREATE (P7M)-[r:RELATED_TO]->(P9M)
+MATCH (P7M:PDQ7M),(P26M:PDQ26M) CREATE (P7M)-[r:RELATED_TO]->(P26M)
+
+MATCH (P8M:PDQ8M),(P9M:PDQ9M) CREATE (P8M)-[r:RELATED_TO]->(P9M)
+MATCH (P8M:PDQ8M),(P13M:PDQ13M) CREATE (P8M)-[r:RELATED_TO]->(P13M)
+
+MATCH (P9M:PDQ9M),(P11M:PDQ11M) CREATE (P9M)-[r:RELATED_TO]->(P11M)
+MATCH (P9M:PDQ9M),(P26M:PDQ26M) CREATE (P9M)-[r:RELATED_TO]->(P26M)
+
+MATCH (P11M:PDQ11M),(P26M:PDQ26M) CREATE (P11M)-[r:RELATED_TO]->(P26M)
+
+
+-----------
+
+PERIODE 3 :
+
+NORD : 
+
+MATCH (P10N:PDQ10N),(P24N:PDQ24N) CREATE (P10N)-[r:RELATED_TO]->(P24N)
+MATCH (P10N:PDQ10N),(P27N:PDQ27N) CREATE (P10N)-[r:RELATED_TO]->(P27N)
+MATCH (P10N:PDQ10N),(P31N:PDQ31N) CREATE (P10N)-[r:RELATED_TO]->(P31N)
+MATCH (P10N:PDQ10N),(P33N:PDQ33N) CREATE (P10N)-[r:RELATED_TO]->(P33N)
+
+MATCH (P24N:PDQ24N),(P33N:PDQ33N) CREATE (P24N)-[r:RELATED_TO]->(P33N)
+MATCH (P24N:PDQ24N),(P35N:PDQ35N) CREATE (P24N)-[r:RELATED_TO]->(P35N)
+MATCH (P24N:PDQ24N),(P38N:PDQ38N) CREATE (P24N)-[r:RELATED_TO]->(P38N)
+
+MATCH (P27N:PDQ27N),(P30N:PDQ30N) CREATE (P27N)-[r:RELATED_TO]->(P30N)
+MATCH (P27N:PDQ27N),(P31N:PDQ31N) CREATE (P27N)-[r:RELATED_TO]->(P31N)
+MATCH (P27N:PDQ27N),(P33N:PDQ33N) CREATE (P27N)-[r:RELATED_TO]->(P33N)
+
+MATCH (P30N:PDQ30N),(P31N:PDQ31N) CREATE (P30N)-[r:RELATED_TO]->(P31N)
+MATCH (P30N:PDQ30N),(P35N:PDQ35N) CREATE (P30N)-[r:RELATED_TO]->(P35N)
+MATCH (P30N:PDQ30N),(P44N:PDQ44N) CREATE (P30N)-[r:RELATED_TO]->(P44N)
+
+MATCH (P31N:PDQ31N),(P33N:PDQ33N) CREATE (P31N)-[r:RELATED_TO]->(P33N)
+MATCH (P31N:PDQ31N),(P35N:PDQ35N) CREATE (P31N)-[r:RELATED_TO]->(P35N)
+MATCH (P31N:PDQ31N),(P44N:PDQ44N) CREATE (P31N)-[r:RELATED_TO]->(P44N)
+
+MATCH (P33N:PDQ33N),(P35N:PDQ35N) CREATE (P33N)-[r:RELATED_TO]->(P35N)
+
+MATCH (P35N:PDQ35N),(P38N:PDQ38N) CREATE (P35N)-[r:RELATED_TO]->(P38N)
+MATCH (P35N:PDQ35N),(P44N:PDQ44N) CREATE (P35N)-[r:RELATED_TO]->(P44N)
+
+MATCH (P38N:PDQ38N),(P44N:PDQ44N) CREATE (P38N)-[r:RELATED_TO]->(P44N)
+
+MATCH (P44N:PDQ44N),(P38N:PDQ38N) CREATE (P44N)-[r:RELATED_TO]->(P38N)
+
+
+Sud : 
+
+MATCH (P12N:PDQ12N),(P15N:PDQ15N) CREATE (P12N)-[r:RELATED_TO]->(P15N)
+MATCH (P12N:PDQ12N),(P20N:PDQ20N) CREATE (P12N)-[r:RELATED_TO]->(P20N)
+
+MATCH (P15N:PDQ15N),(P16N:PDQ16N) CREATE (P15N)-[r:RELATED_TO]->(P16N)
+MATCH (P15N:PDQ15N),(P20N:PDQ20N) CREATE (P15N)-[r:RELATED_TO]->(P20N)
+MATCH (P15N:PDQ15N),(P2150N:PDQ2150N) CREATE (P15N)-[r:RELATED_TO]->(P2150N)
+
+MATCH (P20N:PDQ20N),(P2150N:PDQ2150N) CREATE (P20N)-[r:RELATED_TO]->(P2150N)
+
+MATCH (P2150N:PDQ2150N),(P22N:PDQ22N) CREATE (P2150N)-[r:RELATED_TO]->(P22N)
+
+
+Est : 
+
+MATCH (P23N:PDQ23N),(P48N:PDQ48N) CREATE (P23N)-[r:RELATED_TO]->(P48N)
+
+MATCH (P39N:PDQ39N),(P42N:PDQ42N) CREATE (P39N)-[r:RELATED_TO]->(P42)N
+MATCH (P39N:PDQ39N),(P45N:PDQ45N) CREATE (P39)-[r:RELATED_TO]->(P45N)
+MATCH (P39N:PDQ39N),(P46N:PDQ46N) CREATE (P39)-[r:RELATED_TO]->(P46N)
+
+MATCH (P42N:PDQ42N),(P45N:PDQ45N) CREATE (P42N)-[r:RELATED_TO]->(P45N)
+MATCH (P42N:PDQ42N),(P46N:PDQ46N) CREATE (P42N)-[r:RELATED_TO]->(P46N)
+MATCH (P42N:PDQ42N),(P48N:PDQ48N) CREATE (P42N)-[r:RELATED_TO]->(P48N)
+
+MATCH (P45N:PDQ45N),(P46N:PDQ46N) CREATE (P45N)-[r:RELATED_TO]->(P46N)
+MATCH (P45N:PDQ45N),(P49N:PDQ49N) CREATE (P45N)-[r:RELATED_TO]->(P49N)
+
+MATCH (P46N:PDQ46N),(P48N:PDQ48N) CREATE (P46N)-[r:RELATED_TO]->(P48N)
+MATCH (P46N:PDQ46N),(P49N:PDQ49N) CREATE (P46N)-[r:RELATED_TO]->(P49N)
+
+MATCH (P48N:PDQ48N),(P49N:PDQ49N) CREATE (P48N)-[r:RELATED_TO]->(P49N)
+
+
+Ouest :
+
+MATCH (P1N:PDQ1N),(P3N:PDQ3N) CREATE (P1N)-[r:RELATED_TO]->(P3N)
+MATCH (P1N:PDQ1N),(P4N:PDQ4N) CREATE (P1N)-[r:RELATED_TO]->(P4N)
+MATCH (P1N:PDQ1N),(P555N:PDQ555N) CREATE (P1N)-[r:RELATED_TO]->(P555N)
+
+MATCH (P3N:PDQ3N),(P4N:PDQ4N) CREATE (P3N)-[r:RELATED_TO]->(P4N)
+MATCH (P3N:PDQ3N),(P7N:PDQ7N) CREATE (P3N)-[r:RELATED_TO]->(P7N)
+
+MATCH (P4N:PDQ4N),(P555N:PDQ555N) CREATE (P4N)-[r:RELATED_TO]->(P555N)
+MATCH (P4N:PDQ4N),(P7N:PDQ7N) CREATE (P4N)-[r:RELATED_TO]->(P7N)
+
+MATCH (P555N:PDQ555N),(P7N:PDQ7N) CREATE (P555N)-[r:RELATED_TO]->(P7N)
+MATCH (P555N:PDQ555N),(P8N:PDQ8N) CREATE (P555N)-[r:RELATED_TO]->(P8N)
+
+MATCH (P7N:PDQ7N),(P8N:PDQ8N) CREATE (P7N)-[r:RELATED_TO]->(P8N)
+MATCH (P7N:PDQ7N),(P9N:PDQ9N) CREATE (P7N)-[r:RELATED_TO]->(P9N)
+MATCH (P7N:PDQ7N),(P26N:PDQ26N) CREATE (P7N)-[r:RELATED_TO]->(P26N)
+
+MATCH (P8N:PDQ8N),(P9N:PDQ9N) CREATE (P8N)-[r:RELATED_TO]->(P9N)
+MATCH (P8N:PDQ8N),(P13N:PDQ13N) CREATE (P8N)-[r:RELATED_TO]->(P13N)
+
+MATCH (P9N:PDQ9N),(P11N:PDQ11N) CREATE (P9N)-[r:RELATED_TO]->(P11N)
+MATCH (P9N:PDQ9N),(P26N:PDQ26N) CREATE (P9N)-[r:RELATED_TO]->(P26N)
+
+MATCH (P11N:PDQ11N),(P26N:PDQ26N) CREATE (P11N)-[r:RELATED_TO]->(P26N)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

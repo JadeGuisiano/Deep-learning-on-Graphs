@@ -1,0 +1,100 @@
+import pandas as pd
+import numpy as np
+from itertools import repeat
+
+# Traitement du fichier A et du fichier __ concatenant plusieurs sorties d'interet
+
+
+# Modification fichier A
+
+dg = pd.read_csv("Crime_A.csv") # Création d'un DataFrame.
+dg.to_csv('CRIME_A.txt', index=False, header=False) # Exporte le DataFrame sous format txt en enlevant les headers qui sont inutiles
+print(dg)
+
+
+# Modification fichier ____
+
+dh = pd.read_csv("Crime_.csv") # Création d'un DataFrame.
+dh = dh.replace(['\"',], [''], regex=True) # Ramplace " par du vide.
+dh = dh.rename(index=str, columns={'\"n.G\"':'G','\"n.ID\"':'ID','\"n.CATEGORIE\"':'CATEGORIE','\"n.DATE\"':'DATE','\"n.QUART\"':'QUART','\"n.PDQ\"':'PDQ','\"n.LAT\"':'LAT', '\"n.LONG\"':'LONG'}) # Renommer plusieurs colones
+mymapp = {'Introduction':1, 'M?fait':2, 'Vol dans / sur v?hicule ? moteur':3, 'Vol de v?hicule ? moteur':4, 'Vols qualifi?s':5, 'Infractions entrainant la mort':6,'2018-03-21':1,'2018-03-22':2,'2018-03-23':3,'2018-03-24':4,'2018-03-25':5,'2018-03-26':6,'2018-03-27':7,'2018-03-28':8,'2018-03-29':9,'2018-03-30':10,'2018-03-31':11, 'jour':1,'soir':2,'nuit':3} # Passage qualitatif vers quantitatif
+DS = dh.applymap(lambda s: mymapp.get(s) if s in mymapp else s)
+
+DS['G'] = DS['G'].astype('int64') 
+DS['ID'] = DS['ID'].astype('int64') 
+DS['CATEGORIE'] = DS['CATEGORIE'].astype('int64') # Conversion int pour toutes les colones
+DS['DATE'] = DS['DATE'].astype('int64') 
+DS['QUART'] = DS['QUART'].astype('int64')
+DS['PDQ'] = DS['PDQ'].astype('int64')
+DS.dtypes # Verification du type de chaque colones
+type(DS) # DS est bien sous le format d'un DataFrame 
+
+    # creation du fichier graph_indicator
+GI=DS.loc[:, 'G'] 
+GI.to_csv('CRIME_graph_indicator.txt', index=False, header=False) # Exporte le DataFrame sous format txt en enlevant les headers inutiles
+
+    # creation du fichier node_labels
+NL=DS.loc[:, 'ID'] 
+NL.to_csv('CRIME_node_labels.txt', index=False, header=False) 
+print(NL)
+
+    # creation du fichier node_attributes
+NA=DS.loc[:, 'CATEGORIE':'LONG'] 
+NA.to_csv('CRIME_node_attributes.txt', index=False, header=False) 
+print(NA)
+
+    # creation du fichier graph_label
+
+Gl = [1,2,3,4]# Creation vecteur a 4 valeurs = 4 classes
+Gl = [x for item in Gl for x in repeat(item, 3)]  # répétition de 3 fois classe des graphe car 12 graphe 3 périodes * 4 labels
+Gl= sorted(Gl)  # Trie odre croissant de l'array
+Glabel = pd.DataFrame(Gl)# Convertion de l'array en dataframe
+print(Glabel)
+Glabel.to_csv('CRIME_graph_labels.txt', index=False, header=False) # Export du dataframe en fichier txt    
+
+
+#---------------------------------------------------------------------------------------------------------------
+
+# Traitement des fichier graph_indicator, node_labels, node attributes et création du fichier graph_labels
+
+# Modification fichier Graph_indicator
+#df = pd.read_csv("2731_graph_indicator.csv") # Création d'un DataFrame.
+#df = df.replace(['\"',], [''], regex=True) # Ramplace " par du vide.
+#df.columns = ['SIT'] # Change nom original : "n.SIT" de colone par SIT (plus simple).
+#mymap = {'Nord':1, 'Sud':2, 'Est':3, 'Ouest':4} # Encodage valeur texte vers numerique
+#DS = df.applymap(lambda s: mymap.get(s) if s in mymap else s)
+#type(DS) # DS est bien sous le format d'un DataFrame 
+#DS.to_csv('CRIME_graph_indicator.txt', index=False, header=False) # Exporte le DataFrame sous format txt en enlevant les headers inutiles
+#print(DS)
+
+# Création fichier graph_labels
+
+#Gl = DS.SIT.unique()  # Capture valeur unique de l9output précédent 
+#Gl= sorted(Gl)  # Trie odre croissant de larray
+#Glabel = pd.DataFrame(Gl) # Convertion de l'array en dataframe
+#Glabel.to_csv('CRIME_graph_labels.txt', index=False, header=False) # Export du dataframe en fichier txt
+
+
+# Modification fichier Node_labels
+
+#dh = pd.read_csv("2731_node_labels.csv")
+#dh.to_csv('CRIME_node_labels.txt', index=False, header=False)
+#print(dh)
+
+
+
+# Modification fichier Node_attributes
+
+#di = pd.read_csv("2731_node_attributes.csv", delimiter=',')
+#di = di.replace(['\"',], [''], regex=True)
+#di = di.rename(index=str, columns={'\"n.CATEGORIE\"':'CATEGORIE','\"n.DATE\"':'DATE','\"n.QUART\"':'QUART','\"n.PDQ\"':'PDQ','\"n.LAT\"':'LAT', '\"n.LONG\"':'LONG'}) # Renommer plusieurs colones
+#mymap = {'Introduction':1, 'M?fait':2, 'Vol dans / sur v?hicule ? moteur':3, 'Vol de v?hicule ? moteur':4, 'Vols qualifi?s':5, 'Infractions entrainant la mort':6, '2018-03-21':1,'2018-03-22':2,'2018-03-23':3,'2018-03-24':4,'2018-03-25':5,'2018-03-26':6,'2018-03-27':7,'2018-03-28':8,'2018-03-29':9,'2018-03-30':10,'2018-03-31':11, 'jour':1,'soir':2,'nuit':3} # Passage qualitatif vers quantitatif
+#DI = di.applymap(lambda s: mymap.get(s) if s in mymap else s)
+#DI['CATEGORIE'] = DI['CATEGORIE'].astype('float64') # Conversion int vers float64 pour toutes les colones
+#DI['DATE'] = DI['DATE'].astype('float64')
+#DI['QUART'] = DI['QUART'].astype('float64')
+#DI['PDQ'] = DI['PDQ'].astype('float64')
+#DI.dtypes # Verification du type de chaque colones
+#type(DI)
+#DI.to_csv('CRIME_node_attributes.txt', index=False, header=False)
+#print(DI)
